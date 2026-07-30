@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sutrika – Threads of Tradition, Powered by Innovation. An AI-assisted digital marketplace for Odisha's handloom and handicraft heritage.">
+  <meta name="keywords" content="Odisha Handloom, Handicrafts, Artificial Intelligence, Digital Marketplace, E-Commerce, Cultural Heritage, Artisans, Innovation">
+  <title>Sutrika – Threads of Tradition, Powered by Innovation</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧵</text></svg>">
+</head>
+<body>
+
+  <!-- ====== LOADER ====== -->
+  <div class="loader" id="loader">
+    <div class="loader-logo">
+      <span>🧵</span> Sutrika
+    </div>
+    <div class="loader-spinner"></div>
+    <p class="loader-text">Weaving your experience...</p>
+  </div>
+
+  <!-- ====== HEADER ====== -->
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="#" class="logo">
+          <div class="logo-icon">🧵</div>
+          Sutrika
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#ai-section">AI Features</a></li>
+          <li><a href="#artisans">Artisans</a></li>
+          <li><a href="#heritage">Heritage</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="nav-search-btn" id="navSearchBtn" aria-label="Search">🔍</button>
+          <button class="nav-cart-btn" id="navCartBtn" aria-label="Cart">
+            🛒
+            <span class="cart-count" id="cartCount" style="display:none;">0</span>
+          </button>
+          <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero" id="hero">
+    <div class="hero-image-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-bg-pattern"></div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            AI-Powered Marketplace
+          </div>
+          <h1>
+            Threads of <span class="highlight">Tradition</span>,<br>
+            Powered by <span class="highlight">Innovation</span>
+          </h1>
+          <p class="hero-description">
+            Discover Odisha's finest handloom sarees and handicrafts on an AI-assisted marketplace that connects you directly with master artisans. Every thread tells a story of heritage, every craft embodies centuries of tradition.
+          </p>
+          <div class="hero-buttons">
+            <a href="#products" class="btn btn-primary">
+              Explore Collection ✨
+            </a>
+            <a href="#artisans" class="btn btn-secondary">
+              Meet Artisans →
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="hero-stat-number">500+</div>
+              <div class="hero-stat-label">Artisans</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-number">2000+</div>
+              <div class="hero-stat-label">Products</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-number">50K+</div>
+              <div class="hero-stat-label">Happy Customers</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card-stack">
+            <div class="hero-main-card">
+              <img src="https://images.pexels.com/photos/10317106/pexels-photo-10317106.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Sambalpuri Silk Sarees" loading="eager">
+              <div class="hero-main-card-overlay">
+                <h3>Sambalpuri Silk Saree</h3>
+                <p>Handwoven by Padmini Meher · Sambalpur</p>
+              </div>
+            </div>
+            <div class="hero-floating-card card-ai">
+              <div class="floating-card-icon ai">🤖</div>
+              <div class="floating-card-title">AI Recommendations</div>
+              <div class="floating-card-sub">Personalized for you</div>
+            </div>
+            <div class="hero-floating-card card-rating">
+              <div class="floating-card-icon rating">⭐</div>
+              <div class="floating-card-title">4.9 Rating</div>
+              <div class="floating-card-sub">50,000+ Reviews</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== AI SEARCH BAR ====== -->
+  <section class="ai-search-section">
+    <div class="container">
+      <div class="ai-search-wrapper">
+        <div class="ai-search-icon">🤖</div>
+        <input
+          type="text"
+          class="ai-search-input"
+          id="aiSearchInput"
+          placeholder="Try AI search: 'Red Sambalpuri saree for wedding' or 'Dhokra brass figurine'..."
+        >
+        <button class="ai-search-btn" id="aiSearchBtn">
+          ✨ AI Search
+        </button>
+      </div>
+      <div class="search-suggestions">
+        <span class="search-tag">Sambalpuri Saree</span>
+        <span class="search-tag">Pattachitra</span>
+        <span class="search-tag">Silver Filigree</span>
+        <span class="search-tag">Dhokra Art</span>
+        <span class="search-tag">Kotpad Textile</span>
+        <span class="search-tag">Pipili Appliqué</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CATEGORIES ====== -->
+  <section class="categories" id="categories">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Browse by Craft</span>
+        <h2 class="section-title">Explore Our Categories</h2>
+        <p class="section-subtitle mx-auto">
+          Discover the diverse world of Odisha's artistic traditions — from intricate handloom weaving to ancient metal casting techniques.
+        </p>
+      </div>
+      <div class="categories-grid" id="categoriesGrid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FEATURED PRODUCTS ====== -->
+  <section class="featured-products" id="products">
+    <div class="container">
+      <div class="featured-header">
+        <div>
+          <span class="section-label">Curated Collection</span>
+          <h2 class="section-title">Featured Products</h2>
+          <p class="section-subtitle">Handpicked authentic Odisha crafts, verified for quality and tradition.</p>
+        </div>
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">All Products</button>
+          <button class="filter-tab" data-filter="sarees">Sarees</button>
+          <button class="filter-tab" data-filter="handicrafts">Handicrafts</button>
+          <button class="filter-tab" data-filter="textiles">Textiles</button>
+          <button class="filter-tab" data-filter="jewelry">Jewelry</button>
+          <button class="filter-tab" data-filter="paintings">Paintings</button>
+        </div>
+      </div>
+      <div class="products-grid" id="productsGrid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== AI RECOMMENDATION SECTION ====== -->
+  <section class="ai-section" id="ai-section">
+    <div class="container">
+      <div class="ai-content">
+        <div class="text-center">
+          <span class="section-label" style="color: #A78BFA;">Powered by AI</span>
+          <h2 class="section-title" style="color: white;">Intelligent Product Discovery</h2>
+          <p class="section-subtitle mx-auto" style="color: rgba(255,255,255,0.6);">
+            Our AI engine learns your preferences and suggests products you'll love, making it effortless to discover authentic Odisha crafts.
+          </p>
+        </div>
+
+        <div class="ai-grid">
+          <div class="ai-features-list">
+            <div class="ai-feature-item animate-on-scroll">
+              <div class="ai-feature-icon">🧠</div>
+              <div class="ai-feature-text">
+                <h4>Smart Recommendations</h4>
+                <p>AI analyzes your browsing patterns, purchase history, and preferences to suggest products that match your taste.</p>
+              </div>
+            </div>
+            <div class="ai-feature-item animate-on-scroll">
+              <div class="ai-feature-icon">🔍</div>
+              <div class="ai-feature-text">
+                <h4>Intelligent Search</h4>
+                <p>Natural language search understands queries like "red silk saree for wedding" and finds the perfect match instantly.</p>
+              </div>
+            </div>
+            <div class="ai-feature-item animate-on-scroll">
+              <div class="ai-feature-icon">📸</div>
+              <div class="ai-feature-text">
+                <h4>Visual Search</h4>
+                <p>Upload a photo or screenshot and our AI will find similar handloom patterns, designs, and products from our catalog.</p>
+              </div>
+            </div>
+            <div class="ai-feature-item animate-on-scroll">
+              <div class="ai-feature-icon">💡</div>
+              <div class="ai-feature-text">
+                <h4>Craft Heritage Insights</h4>
+                <p>Learn the history, technique, and cultural significance behind every craft with AI-curated knowledge cards.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ai-visual animate-on-scroll">
+            <div class="ai-demo-card">
+              <div class="ai-demo-header">
+                <div class="ai-demo-avatar">🤖</div>
+                <div>
+                  <div class="ai-demo-title">AI Recommendations</div>
+                  <div class="ai-demo-subtitle">Based on your preferences</div>
+                </div>
+              </div>
+              <div class="ai-recommendation-list">
+                <div class="ai-rec-item" style="opacity:1; background:rgba(255,255,255,0.1);">
+                  <div class="ai-rec-img">
+                    <img src="https://images.pexels.com/photos/10317106/pexels-photo-10317106.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=100&w=100" alt="Sambalpuri Saree" loading="lazy">
+                  </div>
+                  <div class="ai-rec-info">
+                    <div class="ai-rec-name">Sambalpuri Ikat Silk</div>
+                    <div class="ai-rec-match">98% Match</div>
+                  </div>
+                  <div class="ai-rec-price">₹8,500</div>
+                </div>
+                <div class="ai-rec-item">
+                  <div class="ai-rec-img">
+                    <img src="https://images.pexels.com/photos/34056612/pexels-photo-34056612.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=100&w=100" alt="Filigree Set" loading="lazy">
+                  </div>
+                  <div class="ai-rec-info">
+                    <div class="ai-rec-name">Silver Filigree Set</div>
+                    <div class="ai-rec-match">95% Match</div>
+                  </div>
+                  <div class="ai-rec-price">₹6,500</div>
+                </div>
+                <div class="ai-rec-item">
+                  <div class="ai-rec-img">
+                    <img src="https://images.pexels.com/photos/36817155/pexels-photo-36817155.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=100&w=100" alt="Pattachitra" loading="lazy">
+                  </div>
+                  <div class="ai-rec-info">
+                    <div class="ai-rec-name">Pattachitra Painting</div>
+                    <div class="ai-rec-match">92% Match</div>
+                  </div>
+                  <div class="ai-rec-price">₹4,200</div>
+                </div>
+                <div class="ai-rec-item">
+                  <div class="ai-rec-img">
+                    <img src="https://images.pexels.com/photos/33489909/pexels-photo-33489909.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=100&w=100" alt="Dhokra Art" loading="lazy">
+                  </div>
+                  <div class="ai-rec-info">
+                    <div class="ai-rec-name">Dhokra Brass Figure</div>
+                    <div class="ai-rec-match">89% Match</div>
+                  </div>
+                  <div class="ai-rec-price">₹3,800</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== ARTISANS ====== -->
+  <section class="artisans" id="artisans">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Meet the Creators</span>
+        <h2 class="section-title">Our Master Artisans</h2>
+        <p class="section-subtitle mx-auto">
+          Connect directly with the skilled hands behind every masterpiece. Each artisan carries forward generations of traditional craftsmanship.
+        </p>
+      </div>
+      <div class="artisans-grid" id="artisansGrid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== HERITAGE ====== -->
+  <section class="heritage" id="heritage">
+    <div class="container">
+      <div class="heritage-grid">
+        <div class="heritage-image animate-on-scroll">
+          <img src="https://images.pexels.com/photos/28382914/pexels-photo-28382914.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="Traditional loom weaving" loading="lazy">
+          <div class="heritage-image-badge">
+            🏛️ Centuries of Tradition
+          </div>
+        </div>
+        <div class="heritage-content animate-on-scroll">
+          <span class="section-label">Our Mission</span>
+          <h3>Preserving Odisha's Rich Cultural Heritage Through Digital Innovation</h3>
+          <p>
+            Odisha's handloom and handicraft traditions date back centuries, with techniques passed down through generations. From the intricate Ikat weaving of Sambalpur to the delicate silver filigree of Cuttack, each craft tells a story of cultural richness.
+          </p>
+          <p>
+            Sutrika bridges the gap between these timeless traditions and the modern world. By combining AI technology with artisan craftsmanship, we ensure these cultural treasures reach a global audience while supporting the livelihoods of artisan communities.
+          </p>
+          <div class="heritage-features">
+            <div class="heritage-feature">
+              <div class="heritage-feature-icon">🏆</div>
+              <span>GI-Tagged authentic products with certification</span>
+            </div>
+            <div class="heritage-feature">
+              <div class="heritage-feature-icon">🤝</div>
+              <span>Direct artisan partnerships – fair trade guaranteed</span>
+            </div>
+            <div class="heritage-feature">
+              <div class="heritage-feature-icon">🌱</div>
+              <span>Sustainable & eco-friendly production methods</span>
+            </div>
+            <div class="heritage-feature">
+              <div class="heritage-feature-icon">📜</div>
+              <span>Every product comes with its heritage story</span>
+            </div>
+          </div>
+          <a href="#products" class="btn btn-primary">
+            Discover Heritage Crafts →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== IMPACT STATS ====== -->
+  <section class="impact" id="impact">
+    <div class="container">
+      <div class="text-center" style="position:relative;z-index:2;margin-bottom:3rem;">
+        <span class="section-label" style="color: var(--gold-light);">Our Impact</span>
+        <h2 class="section-title" style="color: white;">Empowering Communities, Preserving Culture</h2>
+      </div>
+      <div class="impact-grid">
+        <div class="impact-card animate-on-scroll">
+          <div class="impact-icon">🧑‍🎨</div>
+          <div class="impact-number" data-target="500" data-suffix="+">0</div>
+          <div class="impact-label">Artisans Empowered</div>
+        </div>
+        <div class="impact-card animate-on-scroll">
+          <div class="impact-icon">🏘️</div>
+          <div class="impact-number" data-target="120" data-suffix="+">0</div>
+          <div class="impact-label">Villages Connected</div>
+        </div>
+        <div class="impact-card animate-on-scroll">
+          <div class="impact-icon">📦</div>
+          <div class="impact-number" data-target="25000" data-suffix="+">0</div>
+          <div class="impact-label">Orders Delivered</div>
+        </div>
+        <div class="impact-card animate-on-scroll">
+          <div class="impact-icon">🌍</div>
+          <div class="impact-number" data-target="35" data-suffix="+">0</div>
+          <div class="impact-label">Countries Reached</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== TESTIMONIALS ====== -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">What People Say</span>
+        <h2 class="section-title">Customer Stories</h2>
+        <p class="section-subtitle mx-auto">
+          Hear from customers who have experienced the magic of authentic Odisha craftsmanship.
+        </p>
+      </div>
+      <div class="testimonials-grid" id="testimonialsGrid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== NEWSLETTER ====== -->
+  <section class="newsletter" id="contact">
+    <div class="container">
+      <div class="newsletter-wrapper">
+        <div class="newsletter-content">
+          <h2>Stay Connected with Sutrika</h2>
+          <p>Get updates on new artisan collections, exclusive offers, and stories from the weaving communities of Odisha.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+            <button type="submit" class="newsletter-submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <div class="logo-icon">🧵</div>
+            Sutrika
+          </a>
+          <p>
+            Threads of Tradition, Powered by Innovation. An AI-assisted digital marketplace preserving and promoting Odisha's handloom and handicraft heritage.
+          </p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="Twitter">🐦</a>
+            <a href="#" aria-label="YouTube">▶️</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Marketplace</h4>
+          <ul>
+            <li><a href="#products">All Products</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#artisans">Artisans</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Bestsellers</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#heritage">About Us</a></li>
+            <li><a href="#">Our Mission</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Press & Media</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns & Refunds</a></li>
+            <li><a href="#">Track Order</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sutrika. All rights reserved. Made with ❤️ for Odisha's artisans.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====== SEARCH MODAL ====== -->
+  <div class="search-modal" id="searchModal">
+    <div class="search-modal-backdrop"></div>
+    <div class="search-modal-content">
+      <input type="text" class="search-modal-input" id="searchModalInput" placeholder="🔍  Search products, artisans, crafts...">
+      <div class="search-results" id="searchResults">
+        <p style="text-align:center;color:var(--muted);padding:2rem;">Start typing to search products...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== CART SIDEBAR ====== -->
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>🛒 Shopping Cart</h3>
+      <button class="cart-close" id="cartClose" aria-label="Close cart">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <!-- Rendered by JS -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span class="cart-total-label">Total</span>
+        <span class="cart-total-value" id="cartTotal">₹0</span>
+      </div>
+      <button class="cart-checkout-btn" onclick="checkout()">Proceed to Checkout →</button>
+    </div>
+  </div>
+
+  <!-- ====== TOAST ====== -->
+  <div class="toast" id="toast"></div>
+
+  <!-- ====== BACK TO TOP ====== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <!-- JavaScript -->
+  <script src="App.js"></script>
+</body>
+</html>
